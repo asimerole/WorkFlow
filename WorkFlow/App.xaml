@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:WorkFlow"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Views/Resources/Styles/NavPanelResources.xaml"/>
+                <ResourceDictionary Source="/Views/Resources/Styles/TopPanelResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

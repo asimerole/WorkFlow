@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="WorkFlow.Views.Pages.TimerPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid>
+        <!-- Widgets -->
+        <Border Margin="50 30 0 0">
+            <Grid x:Name="MainPage">
+                <!-- Current Focus Time Widget-->
+                <Border Width="910" 
+                        Height="311" 
+                        Background="Gray" 
+                        Opacity="0.6" 
+                        VerticalAlignment="Top" 
+                        HorizontalAlignment="Left" 
+                        Margin="20 10 30 24"
+                        CornerRadius="20"><TextBlock>Timer</TextBlock>  </Border>
+                        
+                <!-- Today Focus Tasks Widget -->
+                <Border></Border>
+                        
+                <!-- Current Time & Weather Widget -->
+                <Border></Border>
+                        
+                <!-- Focus Music Widget-->
+                <Border></Border>
+                        
+                <!-- Quick Stats -->
+                <Border></Border>
+            </Grid>
+                    
+        </Border>
+    </Grid>
+</UserControl>

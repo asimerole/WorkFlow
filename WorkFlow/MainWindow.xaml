@@ -4,9 +4,163 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WorkFlow"
+        xmlns:pages="clr-namespace:WorkFlow.Views.Pages"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" 
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="CanResize"
+        Height="862" Width="1724"
+        >
 
+    <!-- Window Resources -->
+    <Window.Resources>
+        
+    </Window.Resources>
+    
+    <Grid>
+        <Border Background="#30000000" CornerRadius="15"/>
+        <!-- Main container -->
+        <Border CornerRadius="15" Margin="0">
+            <Border.Background>
+                <ImageBrush Stretch="Fill" ImageSource="C:\development\Projects\WorkFlow\WorkFlow\Assets\Images\bg.jpg"/>
+            </Border.Background>
+            <Grid>
+                <!-- Top panel - blurred background -->
+                <Border x:Name="TopPanelBorder" 
+                        Height="30" 
+                        CornerRadius="15 15 0 0" 
+                        VerticalAlignment="Top" 
+                        Background="#30000000"
+                        Panel.ZIndex="1">
+                    <Border.Effect>
+                        <BlurEffect Radius="10"/>
+                    </Border.Effect>
+                </Border>
+                
+                <!-- Top bar - content (no blur) -->
+                <Border Height="30" VerticalAlignment="Top" Background="Transparent" Panel.ZIndex="2"
+                        MouseDown="TitleBar_MouseDown" PreviewMouseLeftButtonDown="TopPanelBorder_PreviewMouseLeftButtonDown">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Button Style="{StaticResource MinimizeButton}" Click="MinimizeButton_Click">
+                            <Viewbox Width="10" Height="10">
+                                <Image Source="{StaticResource MinimizeButtonImage}"/>
+                            </Viewbox>
+                        </Button>
+                        
+                        <Button Style="{StaticResource MaximizeButton}" Click="MaximizeButton_Click">
+                            <Viewbox Width="16" Height="16">
+                                <Image Source="{StaticResource MaximizeButtonImage}"/>
+                            </Viewbox>
+                        </Button>
+                        
+                        <Button Style="{StaticResource CloseButton}" Click="CloseButton_Click">
+                            <Viewbox Width="10" Height="10">
+                                <Image Source="{StaticResource CloseButtonImage}"/>
+                            </Viewbox>
+                        </Button>
+                    </StackPanel>
+                </Border>
+                
+                <!-- Navigation Panel blur background -->
+                <Border 
+                    Width="98" 
+                    Height="700"
+                    Background="#30000000" 
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Center"
+                    CornerRadius=" 30"
+                    Margin="20 0 20 0"
+                    >
+                    <Border.Effect>
+                       <DropShadowEffect
+                           Direction="360"
+                           Opacity="0.3"/>
+                    </Border.Effect>
+                </Border>
+                
+                <!-- Navigation Panel -->
+                <Border
+                    Width="90" 
+                    Height="700"
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Center"
+                    CornerRadius=" 30"
+                    Margin="20 0 20 0"
+                    Panel.ZIndex="1">
+                    
+                    <!-- Content Panel (nav buttons etc.) -->
+                    <StackPanel VerticalAlignment="Center">
+                        <!-- Home Button -->
+                        <Button Style="{StaticResource NavButtonStyle}" Background="#e8f5e9" Click="HomeButton_Click">
+                            <Viewbox Width="20" Height="20">
+                                <Image Width="20" Source="{StaticResource HomeButtonImage}"/>
+                            </Viewbox>
+                        </Button> 
+                        
+                        <!-- Timer Button -->
+                        <Button Style="{StaticResource NavButtonStyle}" Background="#e8f5e9" Click="TimerButton_Click">
+                            <Viewbox Width="20" Height="20">
+                                <Image Width="20" Source="{StaticResource TimerButtonImage}"/>
+                            </Viewbox>
+                        </Button> 
+                        
+                        <!-- Analytics Button -->
+                        <Button Style="{StaticResource NavButtonStyle}" Background="#e8f5e9">
+                            <Viewbox Width="20" Height="20">
+                                <Image Width="20" Source="{StaticResource AnalyticsButtonImage}"/>
+                            </Viewbox>
+                        </Button> 
+                        
+                        <!-- Music Button -->
+                        <Button Style="{StaticResource NavButtonStyle}" Background="#e8f5e9">
+                            <Viewbox Width="20" Height="20">
+                                <Image Width="20" Source="{StaticResource MusicButtonImage}"/>
+                            </Viewbox>
+                        </Button> 
+                        
+                        <!-- Personalization Button -->
+                        <Button Style="{StaticResource NavButtonStyle}" Background="#e8f5e9">
+                            <Viewbox Width="20" Height="20">
+                                <Image Width="20" Source="{StaticResource PersonalizationButtonImage}"/>
+                            </Viewbox>
+                        </Button> 
+                        
+                        <!-- Settings Button -->
+                        <Button Style="{StaticResource NavButtonStyle}" Background="#e8f5e9">
+                            <Viewbox Width="20" Height="20">
+                                <Image Width="20" Source="{StaticResource SettingsButtonImage}"/>
+                            </Viewbox>
+                        </Button> 
+                    </StackPanel>
+                </Border>
+                
+                <!-- pages container -->
+                <Grid Margin="120,40,0,0">
+                    <!-- Home page -->
+                    <pages:HomePage x:Name="HomePage" Visibility="Visible"/>
+            
+                    <!-- Timer page -->
+                    <pages:TimerPage x:Name="TimerPage" Visibility="Collapsed"/>
+                </Grid>
+                
+                
+                
+                <!-- Invisible Thumb elements -->
+                <Thumb x:Name="ResizeThumbBr" Width="10" Height="10" 
+                       HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                       Cursor="SizeNWSE" DragDelta="ResizeRThumb_DragDelta" Background="Transparent" Opacity="0"/>
+                <Thumb x:Name="ResizeThumbBl" Width="10" Height="10" 
+                       HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                       Cursor="SizeNESW" DragDelta="ResizeLThumb_DragDelta" Background="Transparent" Opacity="0"/>
+                <Thumb x:Name="LeftThumb" Width="4" HorizontalAlignment="Left" Cursor="SizeWE"
+                       DragDelta="LeftThumb_DragDelta" Background="Transparent" Opacity="0"/>
+                <Thumb x:Name="RightThumb" Width="4" HorizontalAlignment="Right" Cursor="SizeWE"
+                       DragDelta="RightThumb_DragDelta" Background="Transparent" Opacity="0"/>
+                <Thumb x:Name="BottomThumb" Height="4" VerticalAlignment="Bottom" Cursor="SizeNS"
+                       DragDelta="BottomThumb_DragDelta" Background="Transparent" Opacity="0"/>
+            </Grid>
+        </Border>
     </Grid>
 </Window>

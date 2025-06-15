@@ -1,0 +1,98 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    
+    
+    <!-- Navigation Button Styles -->
+    <Style x:Key="NavButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Margin" Value="20"/>
+        <Setter Property="Padding" Value="12.8"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="45.2"/>
+        <Setter Property="Height" Value="45.2"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="15" Padding="{TemplateBinding Padding}"
+                            Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalAlignment}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+            
+        </Setter>
+    </Style>
+    
+    <!-- Home button image-->
+    <DrawingImage x:Key="HomeButtonImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Brush="#2E7D32" Geometry="F1 M512,512z M0,0z M434.162,293.382L434.162,293.382 434.162,493.862 308.321,493.862 308.321,368.583 203.682,368.583 203.682,493.862 77.841,493.862 77.841,293.382 256.002,153.862z" />
+                    <GeometryDrawing Brush="#2E7D32" Geometry="F1 M512,512z M0,0z M0,242.682L0,242.682 256,38.93 512,242.682 482.21,285.764 256,105.722 29.79,285.764z" />
+                    <GeometryDrawing Brush="#2E7D32" Geometry="F1 M512,512z M0,0z M439.853,18.138L439.853,18.138 439.853,148.538 376.573,98.138 376.573,18.138z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    
+    <!-- Timer button image -->
+    <DrawingImage x:Key="TimerButtonImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V16 H16 V0 H0 Z">
+                <GeometryDrawing Brush="#0288D1" Geometry="F0 M16,16z M0,0z M8,16C12.4183,16 16,12.4183 16,8 16,3.58172 12.4183,0 8,0 3.58172,0 0,3.58172 0,8 0,12.4183 3.58172,16 8,16z M7,3L7,8.41421 10.2929,11.7071 11.7071,10.2929 9,7.58579 9,3 7,3z" />
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    
+    <!-- Analytics button image -->
+    <DrawingImage x:Key="AnalyticsButtonImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Brush="#5E35B1" Geometry="F1 M512,512z M0,0z M55.924,451.681L55.924,451.681 55.924,20.681 55.924,4.393 0,4.393 0,20.681 0,451.681 0,491.314 0,507.607 16.289,507.607 55.924,507.607 486.922,507.607 503.211,507.607 503.211,451.681 486.922,451.681z" />
+                    <GeometryDrawing Brush="#5E35B1" Geometry="F1 M512,512z M0,0z M133.422,338.877L214.904,204.963C217.609,205.389 220.357,205.674 223.181,205.674 232.247,205.674 240.773,203.385 248.234,199.369L332.71,270.795C331.159,275.775 330.324,281.064 330.324,286.557 330.324,315.772 354.006,339.451 383.22,339.451 412.435,339.451 436.116,315.771 436.116,286.557 436.116,274.17 431.827,262.803 424.696,253.791L512,105.838 478.697,84.951 391.744,234.408C388.961,233.955 386.129,233.658 383.221,233.658 373.901,233.658 365.157,236.088 357.553,240.318L273.449,169.197C275.137,164.025 276.08,158.513 276.08,152.775 276.08,123.56 252.394,99.877 223.182,99.877 193.967,99.877 170.286,123.561 170.286,152.775 170.286,164.829 174.364,175.908 181.153,184.802L99.838,318.435 133.422,338.877z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    
+    <!-- Music button image -->
+    <DrawingImage x:Key="MusicButtonImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M-5.5,0 V32 H26.5 V0 H-5.5 Z">
+                <DrawingGroup.Transform>
+                    <TranslateTransform X="5.5" Y="0" />
+                </DrawingGroup.Transform>
+                <GeometryDrawing Brush="#2E7D32" Geometry="F1 M32,32z M0,0z M5.688,9.656L5.688,20.562C5.219,20.437 4.719,20.343 4.282,20.343 3.282,20.343 2.251,20.687 1.407,21.249 0.563,21.811 0.00100000000000011,22.718 0.00100000000000011,23.78 0.00100000000000011,24.905 0.564,25.749 1.407,26.311 2.25,26.873 3.282,27.186 4.282,27.186 5.22,27.186 6.282,26.873 7.126,26.311 7.97,25.749 8.501,24.905 8.501,23.78L8.501,12.342 18.032,9.623 18.032,17.154C17.594,17.029 17.063,16.966 16.594,16.966 15.625,16.966 14.563,17.247 13.719,17.81 12.875,18.373 12.344,19.279 12.344,20.341 12.344,21.466 12.875,22.341 13.719,22.872 14.563,23.435 15.625,23.778 16.594,23.778 17.532,23.778 18.625,23.434 19.469,22.872 20.344,22.341 20.875,21.466 20.875,20.341L20.875,5.935C20.875,5.247 20.406,4.779 19.719,4.779 19.656,4.779 19.281,4.904 18.688,5.06 17.438,5.404 15.563,5.935 13.438,6.56 12.344,6.841 11.375,7.154 10.407,7.404 9.469,7.685 8.657,7.967 7.938,8.154 7.188,8.373 6.719,8.498 6.532,8.56 6.032,8.716 5.688,9.154 5.688,9.654z" />
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    
+    <!-- Personalization button image -->
+    <DrawingImage x:Key="PersonalizationButtonImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+                <DrawingGroup.Transform>
+                    <TranslateTransform X="0" Y="0.035045851022005081" />
+                </DrawingGroup.Transform>
+                <GeometryDrawing Brush="#5C6BC0" Geometry="F1 M512,512z M0,0z M204.3,5C104.9,24.4 24.8,104.3 5.2,203.4 -31.8,390.4 136.9,529.8 264,510.1 305.2,503.7 325.4,455.5 306.5,418.4 283.4,373 316.4,320 367.4,320L447.1,320C482.9,320 511.9,290.4 512,254.7 511.5,97.1 368.1,-26.9 204.3,5z M96,320C78.3,320 64,305.7 64,288 64,270.3 78.3,256 96,256 113.7,256 128,270.3 128,288 128,305.7 113.7,320 96,320z M128,192C110.3,192 96,177.7 96,160 96,142.3 110.3,128 128,128 145.7,128 160,142.3 160,160 160,177.7 145.7,192 128,192z M256,128C238.3,128 224,113.7 224,96 224,78.3 238.3,64 256,64 273.7,64 288,78.3 288,96 288,113.7 273.7,128 256,128z M384,192C366.3,192 352,177.7 352,160 352,142.3 366.3,128 384,128 401.7,128 416,142.3 416,160 416,177.7 401.7,192 384,192z" />
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    
+    <!-- Settings (properties) button image -->
+    <DrawingImage x:Key="SettingsButtonImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                <GeometryDrawing Brush="#3949AB" Geometry="F0 M24,24z M0,0z M12.7848,0.449982C13.8239,0.449982,14.7167,1.16546,14.9122,2.15495L14.9991,2.59495C15.3408,4.32442,17.1859,5.35722,18.9016,4.7794L19.3383,4.63233C20.3199,4.30175,21.4054,4.69358,21.9249,5.56605L22.7097,6.88386C23.2293,7.75636,23.0365,8.86366,22.2504,9.52253L21.9008,9.81555C20.5267,10.9672,20.5267,13.0328,21.9008,14.1844L22.2504,14.4774C23.0365,15.1363,23.2293,16.2436,22.7097,17.1161L21.925,18.4339C21.4054,19.3064,20.3199,19.6982,19.3382,19.3676L18.9017,19.2205C17.1859,18.6426,15.3408,19.6754,14.9991,21.405L14.9122,21.845C14.7167,22.8345,13.8239,23.55,12.7848,23.55L11.2152,23.55C10.1761,23.55,9.28331,22.8345,9.08781,21.8451L9.00082,21.4048C8.65909,19.6754,6.81395,18.6426,5.09822,19.2205L4.66179,19.3675C3.68016,19.6982,2.59465,19.3063,2.07505,18.4338L1.2903,17.1161C0.770719,16.2436,0.963446,15.1363,1.74956,14.4774L2.09922,14.1844C3.47324,13.0327,3.47324,10.9672,2.09922,9.8156L1.74956,9.52254C0.963446,8.86366,0.77072,7.75638,1.2903,6.8839L2.07508,5.56608C2.59466,4.69359,3.68014,4.30176,4.66176,4.63236L5.09831,4.77939C6.81401,5.35722,8.65909,4.32449,9.00082,2.59506L9.0878,2.15487C9.28331,1.16542,10.176,0.449982,11.2152,0.449982L12.7848,0.449982z M12,15.3C13.8225,15.3 15.3,13.8225 15.3,12 15.3,10.1774 13.8225,8.69998 12,8.69998 10.1774,8.69998 8.69997,10.1774 8.69997,12 8.69997,13.8225 10.1774,15.3 12,15.3z" />
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    
+</ResourceDictionary>
