@@ -1,4 +1,8 @@
-# 🌿 WorkFlow — Your Personal Focus Assistant
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/69dc04ec-cbcc-47bd-9e42-40d54ce1fad3" alt="Логотип" width="600"/>
+</p>
+
+### 🌿 WorkFlow — Your Personal Focus Assistant
 
 **WorkFlow** is a cross-platform productivity app designed to help you concentrate and stay organized. It guides users through techniques like Pomodoro, Deep Work, and interval methods, provides focus-enhancing music, tracks personal analytics, and boosts motivation with streak mechanics and goal-setting.
 
